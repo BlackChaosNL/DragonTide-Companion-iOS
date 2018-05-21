@@ -6,7 +6,7 @@ class RegistrationViewController: UIViewController {
     @IBOutlet weak var Username: UITextField!
     @IBOutlet weak var FirstPassword: UITextField!
     @IBOutlet weak var SecondPassword: UITextField!
-    let alert = UIAlertController(title: "Oops!", message: "Something went wrong with entering the details to the service. Please check your details and try again.", preferredStyle: .alert);
+    let error = UIAlertController(title: "Problem", message: "Something went wrong sending the information, please fix the marked fields and try again, thanks.", preferredStyle: .alert);
     let OKAction = UIAlertAction(title: "OK", style: .default);
     
     @IBAction func KillSegue(_ sender: Any) {
@@ -18,7 +18,7 @@ class RegistrationViewController: UIViewController {
         {
             dismiss(animated: true, completion: nil);
         }
-        present(alert, animated: true, completion: nil);
+        present(error, animated: true, completion: nil);
     }
     
     func verifyAccount() -> Bool {
@@ -45,7 +45,7 @@ class RegistrationViewController: UIViewController {
         Username.text = nil;
         FirstPassword.text = nil;
         SecondPassword.text = nil;
-        alert.addAction(OKAction);
+        error.addAction(OKAction);
     }
 
     override func didReceiveMemoryWarning() {

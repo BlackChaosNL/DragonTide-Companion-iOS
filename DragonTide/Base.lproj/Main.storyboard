@@ -73,6 +73,9 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <segue destination="ZZ7-JG-wLy" kind="show" identifier="CampaignList" id="Ob8-E2-wmn"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -175,10 +178,10 @@
             </objects>
             <point key="canvasLocation" x="842" y="118"/>
         </scene>
-        <!--View Controller-->
+        <!--Campaign List View Controller-->
         <scene sceneID="PDy-15-ky6">
             <objects>
-                <viewController id="ZZ7-JG-wLy" sceneMemberID="viewController">
+                <viewController id="ZZ7-JG-wLy" customClass="CampaignListViewController" customModule="DragonTide" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="FG4-TS-F3q">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -188,7 +191,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7N4-4d-Ji6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="840" y="776"/>
+            <point key="canvasLocation" x="118" y="850"/>
         </scene>
     </scenes>
 </document>

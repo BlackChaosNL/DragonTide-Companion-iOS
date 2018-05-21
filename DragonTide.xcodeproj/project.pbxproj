@@ -15,6 +15,7 @@
 		84EF5D4220B2CB41008753D0 /* DragonTideTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EF5D4120B2CB41008753D0 /* DragonTideTests.swift */; };
 		84EF5D4D20B2CB41008753D0 /* DragonTideUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EF5D4C20B2CB41008753D0 /* DragonTideUITests.swift */; };
 		84EF5D5B20B2D29D008753D0 /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EF5D5A20B2D29D008753D0 /* RegistrationViewController.swift */; };
+		84EF5D5D20B37B00008753D0 /* CampaignListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EF5D5C20B37B00008753D0 /* CampaignListViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		84EF5D4C20B2CB41008753D0 /* DragonTideUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DragonTideUITests.swift; sourceTree = "<group>"; };
 		84EF5D4E20B2CB41008753D0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		84EF5D5A20B2D29D008753D0 /* RegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
+		84EF5D5C20B37B00008753D0 /* CampaignListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CampaignListViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 				84EF5D3520B2CB40008753D0 /* LaunchScreen.storyboard */,
 				84EF5D3820B2CB40008753D0 /* Info.plist */,
 				84EF5D5A20B2D29D008753D0 /* RegistrationViewController.swift */,
+				84EF5D5C20B37B00008753D0 /* CampaignListViewController.swift */,
 			);
 			path = DragonTide;
 			sourceTree = "<group>";
@@ -259,6 +262,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84EF5D5D20B37B00008753D0 /* CampaignListViewController.swift in Sources */,
 				84EF5D5B20B2D29D008753D0 /* RegistrationViewController.swift in Sources */,
 				84EF5D2F20B2CB40008753D0 /* ViewController.swift in Sources */,
 				84EF5D2D20B2CB3F008753D0 /* AppDelegate.swift in Sources */,
