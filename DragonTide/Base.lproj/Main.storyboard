@@ -33,7 +33,11 @@
                                 <rect key="frame" x="0.0" y="623" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <items>
-                                    <barButtonItem title="Login" width="84" id="nSN-LS-HNr"/>
+                                    <barButtonItem title="Login" width="84" id="nSN-LS-HNr">
+                                        <connections>
+                                            <action selector="LoginSequence:" destination="BYZ-38-t0r" id="Iof-EP-sWR"/>
+                                        </connections>
+                                    </barButtonItem>
                                     <barButtonItem title="Register" id="RDz-NL-BUr">
                                         <connections>
                                             <segue destination="qet-FG-dAp" kind="presentation" id="BRy-kn-k3X"/>
@@ -185,9 +189,21 @@
                     <view key="view" contentMode="scaleToFill" id="FG4-TS-F3q">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Wx-aQ-UzO">
+                                <rect key="frame" x="166" y="134" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="XId-V9-fhB"/>
                     </view>
+                    <connections>
+                        <outlet property="testLabel" destination="4Wx-aQ-UzO" id="g2I-Ng-Etv"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7N4-4d-Ji6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
