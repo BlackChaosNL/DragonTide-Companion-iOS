@@ -1,11 +1,3 @@
-//
-//  ViewController.swift
-//  DragonTide
-//
-//  Created by Admin on 21/05/2018.
-//  Copyright © 2018 FreeWare. All rights reserved.
-//
-
 import UIKit
 
 class ViewController: UIViewController {
@@ -15,9 +7,9 @@ class ViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?){
-        let destination : CampaignListViewController = segue.destination as! CampaignListViewController;
+        //let destination : CampaignListViewController = segue.destination as! CampaignListViewController;
         // Add data for transport, needed?
-        destination.str = "test";
+        //destination.str = "test";
     }
     
     override func viewDidLoad() {

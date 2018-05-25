@@ -1,13 +1,9 @@
 import UIKit
 
 class CampaignListViewController: UIViewController {
-    @IBOutlet weak var testLabel: UILabel!
-    
-    var str : String = "";
     
     override func viewDidLoad() {
-        super.viewDidLoad()
-        testLabel.text = str;
+        super.viewDidLoad();
         // Do any additional setup after loading the view.
     }
 

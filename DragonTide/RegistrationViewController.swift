@@ -46,6 +46,7 @@ class RegistrationViewController: UIViewController {
         FirstPassword.text = nil;
         SecondPassword.text = nil;
         error.addAction(OKAction);
+        
     }
 
     override func didReceiveMemoryWarning() {
