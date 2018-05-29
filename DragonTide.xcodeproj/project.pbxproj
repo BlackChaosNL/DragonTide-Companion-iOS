@@ -16,6 +16,9 @@
 		84EF5D4D20B2CB41008753D0 /* DragonTideUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EF5D4C20B2CB41008753D0 /* DragonTideUITests.swift */; };
 		84EF5D5B20B2D29D008753D0 /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EF5D5A20B2D29D008753D0 /* RegistrationViewController.swift */; };
 		84EF5D5D20B37B00008753D0 /* CampaignListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EF5D5C20B37B00008753D0 /* CampaignListViewController.swift */; };
+		84EF5D6120BDE55E008753D0 /* Campaign.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EF5D6020BDE55E008753D0 /* Campaign.swift */; };
+		84EF5D6320BDE5A4008753D0 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EF5D6220BDE5A4008753D0 /* User.swift */; };
+		84EF5D6620BDE619008753D0 /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EF5D6520BDE619008753D0 /* Token.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +54,9 @@
 		84EF5D4E20B2CB41008753D0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		84EF5D5A20B2D29D008753D0 /* RegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
 		84EF5D5C20B37B00008753D0 /* CampaignListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CampaignListViewController.swift; sourceTree = "<group>"; };
+		84EF5D6020BDE55E008753D0 /* Campaign.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Campaign.swift; sourceTree = "<group>"; };
+		84EF5D6220BDE5A4008753D0 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		84EF5D6520BDE619008753D0 /* Token.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Token.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +87,8 @@
 		84EF5D2020B2CB3F008753D0 = {
 			isa = PBXGroup;
 			children = (
+				84EF5D5F20BDDDA1008753D0 /* DragonTide.API */,
+				84EF5D5E20BDDC5C008753D0 /* DragonTide.Domain */,
 				84EF5D2B20B2CB3F008753D0 /* DragonTide */,
 				84EF5D4020B2CB41008753D0 /* DragonTideTests */,
 				84EF5D4B20B2CB41008753D0 /* DragonTideUITests */,
@@ -129,6 +137,23 @@
 				84EF5D4E20B2CB41008753D0 /* Info.plist */,
 			);
 			path = DragonTideUITests;
+			sourceTree = "<group>";
+		};
+		84EF5D5E20BDDC5C008753D0 /* DragonTide.Domain */ = {
+			isa = PBXGroup;
+			children = (
+				84EF5D6020BDE55E008753D0 /* Campaign.swift */,
+				84EF5D6220BDE5A4008753D0 /* User.swift */,
+				84EF5D6520BDE619008753D0 /* Token.swift */,
+			);
+			path = DragonTide.Domain;
+			sourceTree = "<group>";
+		};
+		84EF5D5F20BDDDA1008753D0 /* DragonTide.API */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = DragonTide.API;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -263,6 +288,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				84EF5D5D20B37B00008753D0 /* CampaignListViewController.swift in Sources */,
+				84EF5D6620BDE619008753D0 /* Token.swift in Sources */,
+				84EF5D6120BDE55E008753D0 /* Campaign.swift in Sources */,
+				84EF5D6320BDE5A4008753D0 /* User.swift in Sources */,
 				84EF5D5B20B2D29D008753D0 /* RegistrationViewController.swift in Sources */,
 				84EF5D2F20B2CB40008753D0 /* ViewController.swift in Sources */,
 				84EF5D2D20B2CB3F008753D0 /* AppDelegate.swift in Sources */,
