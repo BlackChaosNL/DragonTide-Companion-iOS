@@ -1,6 +1,6 @@
 import Foundation
 
-class User {
+class User: Codable {
     var email: String;
     var username: String;
     var password: String;

@@ -1,6 +1,6 @@
 import Foundation
 
-class Campaign {
+class Campaign: Codable {
     var title: String;
     var description: String;
     var dm: User?;

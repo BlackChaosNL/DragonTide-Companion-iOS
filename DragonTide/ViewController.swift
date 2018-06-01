@@ -2,26 +2,25 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    @IBAction func LoginSequence(_ sender: Any) {
-        performSegue(withIdentifier: "CampaignList", sender: Any?.self);
-    }
+    @IBOutlet weak var password: UITextField!
+    @IBOutlet weak var email: UITextField!
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?){
-        //let destination : CampaignListViewController = segue.destination as! CampaignListViewController;
-        // Add data for transport, needed?
-        //destination.str = "test";
+    @IBAction func LoginSequence(_ sender: Any) {
+        loginAction(email: self.email.text!, password: self.password.text!) { (ok: Bool, token: Token?, error: Error?) in
+            if (!ok) {
+                fatalError(error.debugDescription);
+            } else {
+                self.performSegue(withIdentifier: "CampaignList", sender: Any?.self);
+            }
+        }
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
-
-
 }
 

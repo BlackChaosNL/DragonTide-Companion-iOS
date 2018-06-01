@@ -6,7 +6,9 @@ class RegistrationViewController: UIViewController {
     @IBOutlet weak var Username: UITextField!
     @IBOutlet weak var FirstPassword: UITextField!
     @IBOutlet weak var SecondPassword: UITextField!
+    
     let error = UIAlertController(title: "Problem", message: "Something went wrong sending the information, please fix the marked fields and try again, thanks.", preferredStyle: .alert);
+    let success = UIAlertController(title: "Done", message: "Account has been successfully created", preferredStyle: .alert);
     let OKAction = UIAlertAction(title: "OK", style: .default);
     
     @IBAction func KillSegue(_ sender: Any) {
@@ -22,7 +24,6 @@ class RegistrationViewController: UIViewController {
     }
     
     func verifyAccount() -> Bool {
-        // Check if account exists, maybe through
         if(EMailAddress.text != "" && Username.text != "") {
             return false;
         }
