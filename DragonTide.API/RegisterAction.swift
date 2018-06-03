@@ -1,10 +1,9 @@
 import Foundation
 
-func loginAction(email: String, password: String, completion: ((_ ok: Bool, _ message: Token?, _ error: Error?) -> Void)?) {
-    setenv("CFNETWORK_DIAGNOSTICS", "3", 1);
-    var request = URLRequest(url: URL(string: "https://dragontide.herokuapp.com/auth/login")!);
+func registerAction(email: String, username: String, password: String, completion: ((_ ok: Bool, _ message: Bool?, _ error: Error?) -> Void)?) {
+    var request = URLRequest(url: URL(string: "https://dragontide.herokuapp.com/auth/register")!);
     request.httpMethod = "POST";
-    let jsonBody = ["email": email, "password": password]	;
+    let jsonBody = ["email": email, "username": username, "password": password];
     request.httpBody = try? JSONSerialization.data(withJSONObject: jsonBody, options: []);
     request.addValue("", forHTTPHeaderField: "Accept-Encoding");
     request.addValue("application/json", forHTTPHeaderField: "Content-Type");
@@ -16,7 +15,10 @@ func loginAction(email: String, password: String, completion: ((_ ok: Bool, _ me
             if let error = Error {
                 completion?(false, nil, error);
             } else if let jsonData = Data {
-                NSLog(String(data: jsonData, encoding: String.Encoding.utf8)!);
+                let result = try? JSONSerialization.jsonObject(with: jsonData) as! [String: AnyObject];
+                if let jsonResult = result!["ok"] as? Bool {
+                    completion?(true, jsonResult, nil);
+                }
             } else {
                 let err = NSError(domain: "", code: 0, userInfo: [NSLocalizedDescriptionKey : "Data could not be requested"]) as Error;
                 completion?(false, nil, err);

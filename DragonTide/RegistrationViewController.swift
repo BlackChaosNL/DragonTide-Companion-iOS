@@ -7,7 +7,8 @@ class RegistrationViewController: UIViewController {
     @IBOutlet weak var FirstPassword: UITextField!
     @IBOutlet weak var SecondPassword: UITextField!
     
-    let error = UIAlertController(title: "Problem", message: "Something went wrong sending the information, please fix the marked fields and try again, thanks.", preferredStyle: .alert);
+    let notFilledInCorrectly = UIAlertController(title: "Problem", message: "Something went wrong sending the information, E-Mail or username might exist already, thanks.", preferredStyle: .alert);
+    let error = UIAlertController(title: "Problem", message: "Fields are not filled correctly", preferredStyle: .alert);
     let success = UIAlertController(title: "Done", message: "Account has been successfully created", preferredStyle: .alert);
     let OKAction = UIAlertAction(title: "OK", style: .default);
     
@@ -16,15 +17,26 @@ class RegistrationViewController: UIViewController {
     }
     
     @IBAction func CreateAccount(_ sender: Any) {
+        let temp = UIViewController.displaySpinner(onView: self.view);
         if(verifyAccount() && verifyPassword())
         {
-            dismiss(animated: true, completion: nil);
+            registerAction(email: EMailAddress.text!, username: Username.text!, password: FirstPassword.text!) {(ok: Bool, result: Bool?, error: Error?) in
+                UIViewController.removeSpinner(spinner: temp);
+                if(result == false) {
+                    self.present(self.notFilledInCorrectly, animated: true, completion: nil);
+                } else {
+                    self.present(self.success, animated: true, completion: { () in
+                        self.emptyEverything();
+                    });
+                }
+            }
+        }else{
+            self.present(self.error, animated: true, completion: nil);
         }
-        present(error, animated: true, completion: nil);
     }
     
     func verifyAccount() -> Bool {
-        if(EMailAddress.text != "" && Username.text != "") {
+        if(EMailAddress.text == "" && Username.text == "") {
             return false;
         }
         
@@ -40,14 +52,19 @@ class RegistrationViewController: UIViewController {
         return true;
     }
     
+    func emptyEverything() {
+        self.EMailAddress.text = nil;
+        self.Username.text = nil;
+        self.FirstPassword.text = nil;
+        self.SecondPassword.text = nil;
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad();
-        EMailAddress.text = nil;
-        Username.text = nil;
-        FirstPassword.text = nil;
-        SecondPassword.text = nil;
+        self.emptyEverything();
         error.addAction(OKAction);
-        
+        success.addAction(OKAction);
+        notFilledInCorrectly.addAction(OKAction);
     }
 
     override func didReceiveMemoryWarning() {
