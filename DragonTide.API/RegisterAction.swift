@@ -3,11 +3,9 @@ import Foundation
 func registerAction(email: String, username: String, password: String, completion: ((_ ok: Bool, _ message: Bool?, _ error: Error?) -> Void)?) {
     var request = URLRequest(url: URL(string: "https://dragontide.herokuapp.com/auth/register")!);
     request.httpMethod = "POST";
-    let jsonBody = ["email": email, "username": username, "password": password];
-    request.httpBody = try? JSONSerialization.data(withJSONObject: jsonBody, options: []);
+    request.httpBody = try? JSONSerialization.data(withJSONObject: ["email": email, "username": username, "password": password], options: []);
     request.addValue("", forHTTPHeaderField: "Accept-Encoding");
     request.addValue("application/json", forHTTPHeaderField: "Content-Type");
-    NSLog(String(data: request.httpBody!, encoding: .utf8)!);
     let session = URLSession(configuration: URLSessionConfiguration.default);
     
     let task = session.dataTask(with: request) { (Data, Response, Error) in
