@@ -20,7 +20,8 @@ class RegistrationViewController: UIViewController {
         let temp = UIViewController.displaySpinner(onView: self.view);
         if(verifyAccount() && verifyPassword())
         {
-            registerAction(email: EMailAddress.text!, username: Username.text!, password: FirstPassword.text!) {(ok: Bool, result: Bool?, error: Error?) in
+            registerAction(email: EMailAddress.text!, username: Username.text!, password: FirstPassword.text!) {
+                (ok: Bool, result: Bool?, error: Error?) in
                 UIViewController.removeSpinner(spinner: temp);
                 if(result == false) {
                     self.present(self.notFilledInCorrectly, animated: true, completion: nil);

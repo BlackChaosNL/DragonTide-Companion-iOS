@@ -5,17 +5,16 @@ class CampaignListViewController: UITableViewController {
     var Campaigns: [Campaign] = [];
     
     @IBAction func LogoutAction(_ sender: Any) {
-        // Remove key and pop view.
-        
+        UserDefaults.standard.removeObject(forKey: "AccessToken");
         dismiss(animated: true, completion: nil);
     }
     
     override func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
+        return 1;
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return Campaigns.count
+        return Campaigns.count;
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -32,7 +31,7 @@ class CampaignListViewController: UITableViewController {
             (ok: Bool, campaigns: [Campaign]?, error: Error?) in
             if(ok) {
                 self.Campaigns = campaigns!;
-                tableView.reloadData();
+                self.tableView.reloadData();
             }
             UIViewController.removeSpinner(spinner: temp);
         });
