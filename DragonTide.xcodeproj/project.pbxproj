@@ -8,7 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		84AFC04120C41DE80074A53F /* RegisterAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AFC04020C41DE80074A53F /* RegisterAction.swift */; };
-		84AFC04620C43C830074A53F /* LoaderController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AFC04520C43C830074A53F /* LoaderController.swift */; };
+		84AFC04620C43C830074A53F /* Spinner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AFC04520C43C830074A53F /* Spinner.swift */; };
+		84AFC04A20C8582E0074A53F /* RetrieveCampaignListAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AFC04920C8582E0074A53F /* RetrieveCampaignListAction.swift */; };
+		84AFC04C20C85FCF0074A53F /* Storage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AFC04B20C85FCF0074A53F /* Storage.swift */; };
 		84EF5D2D20B2CB3F008753D0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EF5D2C20B2CB3F008753D0 /* AppDelegate.swift */; };
 		84EF5D2F20B2CB40008753D0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EF5D2E20B2CB40008753D0 /* ViewController.swift */; };
 		84EF5D3220B2CB40008753D0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84EF5D3020B2CB40008753D0 /* Main.storyboard */; };
@@ -43,7 +45,9 @@
 
 /* Begin PBXFileReference section */
 		84AFC04020C41DE80074A53F /* RegisterAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterAction.swift; sourceTree = "<group>"; };
-		84AFC04520C43C830074A53F /* LoaderController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoaderController.swift; sourceTree = "<group>"; };
+		84AFC04520C43C830074A53F /* Spinner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spinner.swift; sourceTree = "<group>"; };
+		84AFC04920C8582E0074A53F /* RetrieveCampaignListAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RetrieveCampaignListAction.swift; sourceTree = "<group>"; };
+		84AFC04B20C85FCF0074A53F /* Storage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storage.swift; sourceTree = "<group>"; };
 		84EF5D2920B2CB3F008753D0 /* DragonTide.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DragonTide.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84EF5D2C20B2CB3F008753D0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		84EF5D2E20B2CB40008753D0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -93,14 +97,26 @@
 		84AFC04220C433FC0074A53F /* DragonTide.Helpers */ = {
 			isa = PBXGroup;
 			children = (
-				84AFC04520C43C830074A53F /* LoaderController.swift */,
+				84AFC04520C43C830074A53F /* Spinner.swift */,
+				84AFC04B20C85FCF0074A53F /* Storage.swift */,
 			);
 			path = DragonTide.Helpers;
+			sourceTree = "<group>";
+		};
+		84AFC04E20CAEF2F0074A53F /* DragonTide.Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				84EF5D2E20B2CB40008753D0 /* ViewController.swift */,
+				84EF5D5A20B2D29D008753D0 /* RegistrationViewController.swift */,
+				84EF5D5C20B37B00008753D0 /* CampaignListViewController.swift */,
+			);
+			path = DragonTide.Controllers;
 			sourceTree = "<group>";
 		};
 		84EF5D2020B2CB3F008753D0 = {
 			isa = PBXGroup;
 			children = (
+				84AFC04E20CAEF2F0074A53F /* DragonTide.Controllers */,
 				84AFC04220C433FC0074A53F /* DragonTide.Helpers */,
 				84EF5D6920BF4CF8008753D0 /* DragonTide.API */,
 				84EF5D5E20BDDC5C008753D0 /* DragonTide.Domain */,
@@ -125,13 +141,10 @@
 			isa = PBXGroup;
 			children = (
 				84EF5D2C20B2CB3F008753D0 /* AppDelegate.swift */,
-				84EF5D2E20B2CB40008753D0 /* ViewController.swift */,
 				84EF5D3020B2CB40008753D0 /* Main.storyboard */,
 				84EF5D3320B2CB40008753D0 /* Assets.xcassets */,
 				84EF5D3520B2CB40008753D0 /* LaunchScreen.storyboard */,
 				84EF5D3820B2CB40008753D0 /* Info.plist */,
-				84EF5D5A20B2D29D008753D0 /* RegistrationViewController.swift */,
-				84EF5D5C20B37B00008753D0 /* CampaignListViewController.swift */,
 			);
 			path = DragonTide;
 			sourceTree = "<group>";
@@ -169,6 +182,7 @@
 			children = (
 				84EF5D6A20BF4D21008753D0 /* LoginAction.swift */,
 				84AFC04020C41DE80074A53F /* RegisterAction.swift */,
+				84AFC04920C8582E0074A53F /* RetrieveCampaignListAction.swift */,
 			);
 			path = DragonTide.API;
 			sourceTree = "<group>";
@@ -304,13 +318,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84AFC04A20C8582E0074A53F /* RetrieveCampaignListAction.swift in Sources */,
 				84EF5D5D20B37B00008753D0 /* CampaignListViewController.swift in Sources */,
 				84EF5D6620BDE619008753D0 /* Token.swift in Sources */,
 				84EF5D6120BDE55E008753D0 /* Campaign.swift in Sources */,
 				84AFC04120C41DE80074A53F /* RegisterAction.swift in Sources */,
+				84AFC04C20C85FCF0074A53F /* Storage.swift in Sources */,
 				84EF5D6B20BF4D21008753D0 /* LoginAction.swift in Sources */,
 				84EF5D6320BDE5A4008753D0 /* User.swift in Sources */,
-				84AFC04620C43C830074A53F /* LoaderController.swift in Sources */,
+				84AFC04620C43C830074A53F /* Spinner.swift in Sources */,
 				84EF5D5B20B2D29D008753D0 /* RegistrationViewController.swift in Sources */,
 				84EF5D2F20B2CB40008753D0 /* ViewController.swift in Sources */,
 				84EF5D2D20B2CB3F008753D0 /* AppDelegate.swift in Sources */,

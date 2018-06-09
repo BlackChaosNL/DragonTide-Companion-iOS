@@ -8,12 +8,12 @@ class Campaign: Codable {
     var prive: Bool;
     var password: String;
     
-    public init(titl: String, desc: String, DM: User?, act: Bool, priv: Bool, pass: String) {
-        title = titl;
-        description = desc;
-        dm = DM;
-        active = act;
-        prive = priv;
-        password = pass;
+    public init(title: String, description: String, dm: User?, active: Bool, privat: Bool, password: String) {
+        self.title = title;
+        self.description = description;
+        self.dm = dm;
+        self.active = active;
+        self.prive = privat;
+        self.password = password;
     }
 }
