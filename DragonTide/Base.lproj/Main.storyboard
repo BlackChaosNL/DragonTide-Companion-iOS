@@ -215,7 +215,7 @@
                         </connections>
                     </tableView>
                     <connections>
-                        <segue destination="hsA-y0-UJT" kind="showDetail" identifier="CampaignDetail" id="8XQ-an-97n"/>
+                        <segue destination="hsA-y0-UJT" kind="show" identifier="CampaignDetail" id="8XQ-an-97n"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Jur-Pl-XjS" userLabel="First Responder" sceneMemberID="firstResponder"/>

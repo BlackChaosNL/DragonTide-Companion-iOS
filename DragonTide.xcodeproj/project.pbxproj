@@ -14,6 +14,7 @@
 		84AFC05020CC556A0074A53F /* CampaignDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AFC04F20CC556A0074A53F /* CampaignDetailController.swift */; };
 		84AFC05220CC5EFF0074A53F /* CampaignAddController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AFC05120CC5EFF0074A53F /* CampaignAddController.swift */; };
 		84AFC05420CC6E6E0074A53F /* AddCampaignAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AFC05320CC6E6E0074A53F /* AddCampaignAction.swift */; };
+		84AFC05620CD3D310074A53F /* QR.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AFC05520CD3D310074A53F /* QR.swift */; };
 		84EF5D2D20B2CB3F008753D0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EF5D2C20B2CB3F008753D0 /* AppDelegate.swift */; };
 		84EF5D2F20B2CB40008753D0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EF5D2E20B2CB40008753D0 /* ViewController.swift */; };
 		84EF5D3220B2CB40008753D0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84EF5D3020B2CB40008753D0 /* Main.storyboard */; };
@@ -54,6 +55,7 @@
 		84AFC04F20CC556A0074A53F /* CampaignDetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CampaignDetailController.swift; sourceTree = "<group>"; };
 		84AFC05120CC5EFF0074A53F /* CampaignAddController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CampaignAddController.swift; sourceTree = "<group>"; };
 		84AFC05320CC6E6E0074A53F /* AddCampaignAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCampaignAction.swift; sourceTree = "<group>"; };
+		84AFC05520CD3D310074A53F /* QR.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QR.swift; sourceTree = "<group>"; };
 		84EF5D2920B2CB3F008753D0 /* DragonTide.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DragonTide.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84EF5D2C20B2CB3F008753D0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		84EF5D2E20B2CB40008753D0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -105,6 +107,7 @@
 			children = (
 				84AFC04520C43C830074A53F /* Spinner.swift */,
 				84AFC04B20C85FCF0074A53F /* Storage.swift */,
+				84AFC05520CD3D310074A53F /* QR.swift */,
 			);
 			path = DragonTide.Helpers;
 			sourceTree = "<group>";
@@ -333,6 +336,7 @@
 				84EF5D6120BDE55E008753D0 /* Campaign.swift in Sources */,
 				84AFC04120C41DE80074A53F /* RegisterAction.swift in Sources */,
 				84AFC05420CC6E6E0074A53F /* AddCampaignAction.swift in Sources */,
+				84AFC05620CD3D310074A53F /* QR.swift in Sources */,
 				84AFC04C20C85FCF0074A53F /* Storage.swift in Sources */,
 				84AFC05020CC556A0074A53F /* CampaignDetailController.swift in Sources */,
 				84EF5D6B20BF4D21008753D0 /* LoginAction.swift in Sources */,

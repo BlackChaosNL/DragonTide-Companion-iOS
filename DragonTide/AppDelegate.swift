@@ -1,11 +1,3 @@
-//
-//  AppDelegate.swift
-//  DragonTide
-//
-//  Created by Admin on 21/05/2018.
-//  Copyright © 2018 FreeWare. All rights reserved.
-//
-
 import UIKit
 
 @UIApplicationMain
