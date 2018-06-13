@@ -26,12 +26,13 @@ func retrieveCampaignListAction(completion: ((_ ok: Bool, _ message: [Campaign]?
                 let campaigns = result!["campaigns"] as! [[String : Any]];
                 
                 for campaign in campaigns {
+                    let id = campaign["_id"] as! String;
                     let title = campaign["title"] as! String;
                     let description = campaign["description"] as! String;
                     let active = campaign["active"] as! Bool;
                     let prive = campaign["private"] as! Bool;
                     let password = campaign["password"] as! String;
-                    c.append(Campaign(title: title, description: description, dm: nil, active: active, privat: prive, password: password));
+                    c.append(Campaign(id: id, title: title, description: description, dm: nil, active: active, privat: prive, password: password));
                 }
                 
                 completion?(ok!, c, nil);

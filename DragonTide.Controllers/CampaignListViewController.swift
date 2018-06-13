@@ -24,6 +24,12 @@ class CampaignListViewController: UITableViewController {
         return cell;
     }
     
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath){
+        tableView.deselectRow(at: indexPath, animated: true);
+        SetCacheValue(Campaigns[indexPath.row], key: "SelectedCampaign");
+        self.performSegue(withIdentifier: "CampaignDetail", sender: Any?.self);
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad();
         let temp = UIViewController.displaySpinner(onView: self.view);
