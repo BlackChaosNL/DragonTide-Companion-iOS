@@ -5,7 +5,7 @@ func retrieveCampaignListAction(completion: ((_ ok: Bool, _ message: [Campaign]?
     request.httpMethod = "GET";
     request.addValue("", forHTTPHeaderField: "Accept-Encoding");
     request.addValue("application/json", forHTTPHeaderField: "Content-Type");
-    let accessToken: Token = GetCacheValue(key: "AccessToken")!;
+    let accessToken: Token = GetValue(key: "AccessToken", loadType: .Persistent)!;
     request.addValue("Bearer " + accessToken.token, forHTTPHeaderField: "Authorization");
     let session = URLSession(configuration: URLSessionConfiguration.default);
     

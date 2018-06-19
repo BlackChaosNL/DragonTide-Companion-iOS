@@ -15,6 +15,8 @@
 		84AFC05220CC5EFF0074A53F /* CampaignAddController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AFC05120CC5EFF0074A53F /* CampaignAddController.swift */; };
 		84AFC05420CC6E6E0074A53F /* AddCampaignAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AFC05320CC6E6E0074A53F /* AddCampaignAction.swift */; };
 		84AFC05620CD3D310074A53F /* QR.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AFC05520CD3D310074A53F /* QR.swift */; };
+		84EC7D3120D148AA00DE3D4C /* DocumentDirectory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EC7D3020D148AA00DE3D4C /* DocumentDirectory.swift */; };
+		84EC7D3320D9B59300DE3D4C /* saveType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EC7D3220D9B59300DE3D4C /* saveType.swift */; };
 		84EF5D2D20B2CB3F008753D0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EF5D2C20B2CB3F008753D0 /* AppDelegate.swift */; };
 		84EF5D2F20B2CB40008753D0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EF5D2E20B2CB40008753D0 /* ViewController.swift */; };
 		84EF5D3220B2CB40008753D0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84EF5D3020B2CB40008753D0 /* Main.storyboard */; };
@@ -56,6 +58,8 @@
 		84AFC05120CC5EFF0074A53F /* CampaignAddController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CampaignAddController.swift; sourceTree = "<group>"; };
 		84AFC05320CC6E6E0074A53F /* AddCampaignAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCampaignAction.swift; sourceTree = "<group>"; };
 		84AFC05520CD3D310074A53F /* QR.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QR.swift; sourceTree = "<group>"; };
+		84EC7D3020D148AA00DE3D4C /* DocumentDirectory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentDirectory.swift; sourceTree = "<group>"; };
+		84EC7D3220D9B59300DE3D4C /* saveType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = saveType.swift; sourceTree = "<group>"; };
 		84EF5D2920B2CB3F008753D0 /* DragonTide.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DragonTide.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84EF5D2C20B2CB3F008753D0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		84EF5D2E20B2CB40008753D0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -108,6 +112,7 @@
 				84AFC04520C43C830074A53F /* Spinner.swift */,
 				84AFC04B20C85FCF0074A53F /* Storage.swift */,
 				84AFC05520CD3D310074A53F /* QR.swift */,
+				84EC7D3020D148AA00DE3D4C /* DocumentDirectory.swift */,
 			);
 			path = DragonTide.Helpers;
 			sourceTree = "<group>";
@@ -184,6 +189,7 @@
 				84EF5D6020BDE55E008753D0 /* Campaign.swift */,
 				84EF5D6220BDE5A4008753D0 /* User.swift */,
 				84EF5D6520BDE619008753D0 /* Token.swift */,
+				84EC7D3220D9B59300DE3D4C /* saveType.swift */,
 			);
 			path = DragonTide.Domain;
 			sourceTree = "<group>";
@@ -332,9 +338,11 @@
 			files = (
 				84AFC04A20C8582E0074A53F /* RetrieveCampaignListAction.swift in Sources */,
 				84EF5D5D20B37B00008753D0 /* CampaignListViewController.swift in Sources */,
+				84EC7D3120D148AA00DE3D4C /* DocumentDirectory.swift in Sources */,
 				84EF5D6620BDE619008753D0 /* Token.swift in Sources */,
 				84EF5D6120BDE55E008753D0 /* Campaign.swift in Sources */,
 				84AFC04120C41DE80074A53F /* RegisterAction.swift in Sources */,
+				84EC7D3320D9B59300DE3D4C /* saveType.swift in Sources */,
 				84AFC05420CC6E6E0074A53F /* AddCampaignAction.swift in Sources */,
 				84AFC05620CD3D310074A53F /* QR.swift in Sources */,
 				84AFC04C20C85FCF0074A53F /* Storage.swift in Sources */,

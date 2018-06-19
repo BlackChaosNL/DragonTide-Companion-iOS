@@ -1,12 +1,10 @@
 import UIKit
 
 class CampaignDetailController : UIViewController {
-    
-    
     @IBOutlet weak var Qr: UIImageView!
     @IBOutlet weak var Description: UILabel!
     @IBOutlet weak var TitleVar: UINavigationItem!
-    let c: Campaign = GetCacheValue(key: "SelectedCampaign")!;
+    let c: Campaign = GetValue(key: "SelectedCampaign", loadType: .Temporary)!;
     
     @IBAction func DismissDetailView(_ sender: Any) {
         UserDefaults.standard.removeObject(forKey: "SelectedCampaign");

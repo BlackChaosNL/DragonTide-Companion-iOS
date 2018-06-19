@@ -10,7 +10,7 @@ func AddCampaign(campaignname: String, campaignDescription: String, campaignPass
     }
     request.addValue("", forHTTPHeaderField: "Accept-Encoding");
     request.addValue("application/json", forHTTPHeaderField: "Content-Type");
-    let accessToken: Token = GetCacheValue(key: "AccessToken")!;
+    let accessToken: Token = GetValue(key: "AccessToken", loadType: .Persistent)!;
     request.addValue("Bearer " + accessToken.token, forHTTPHeaderField: "Authorization");
     let configuration = URLSessionConfiguration.default;
     configuration.requestCachePolicy = .reloadIgnoringLocalCacheData;

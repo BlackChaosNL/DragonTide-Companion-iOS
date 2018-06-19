@@ -5,7 +5,7 @@ class CampaignListViewController: UITableViewController {
     var Campaigns: [Campaign] = [];
     
     @IBAction func LogoutAction(_ sender: Any) {
-        UserDefaults.standard.removeObject(forKey: "AccessToken");
+        DestroyValue(key: "AccessToken", saveType: .Temporary);
         dismiss(animated: true, completion: nil);
     }
     
@@ -26,7 +26,7 @@ class CampaignListViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath){
         tableView.deselectRow(at: indexPath, animated: true);
-        SetCacheValue(Campaigns[indexPath.row], key: "SelectedCampaign");
+        SetValue(Campaigns[indexPath.row], key: "SelectedCampaign", saveType: .Temporary);
         self.performSegue(withIdentifier: "CampaignDetail", sender: Any?.self);
     }
     

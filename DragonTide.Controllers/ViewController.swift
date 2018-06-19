@@ -16,7 +16,7 @@ class ViewController: UIViewController {
                 self.present(self.notFilledInCorrectly, animated: true, completion: nil);
                 self.password.text = nil;
             } else {
-                SetCacheValue(token, key: "AccessToken");
+                SetValue(token, key: "AccessToken", saveType: .Persistent);
                 self.performSegue(withIdentifier: "CampaignList", sender: Any?.self);
             }
         }
@@ -25,8 +25,16 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad();
         notFilledInCorrectly.addAction(OK);
+        
     }
 
+    override func viewDidAppear(_ animated: Bool) {
+        let item: Token? = GetValue(key: "AccessToken", loadType: .Persistent);
+        if(item != nil && (item?.expires!)! <= Date.init()) {
+            self.performSegue(withIdentifier: "CampaignList", sender: Any?.self);
+        }
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
