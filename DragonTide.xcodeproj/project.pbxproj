@@ -17,6 +17,7 @@
 		84AFC05620CD3D310074A53F /* QR.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AFC05520CD3D310074A53F /* QR.swift */; };
 		84EC7D3120D148AA00DE3D4C /* DocumentDirectory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EC7D3020D148AA00DE3D4C /* DocumentDirectory.swift */; };
 		84EC7D3320D9B59300DE3D4C /* saveType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EC7D3220D9B59300DE3D4C /* saveType.swift */; };
+		84EC7D3520DA4A7800DE3D4C /* DeleteCampaignAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EC7D3420DA4A7800DE3D4C /* DeleteCampaignAction.swift */; };
 		84EF5D2D20B2CB3F008753D0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EF5D2C20B2CB3F008753D0 /* AppDelegate.swift */; };
 		84EF5D2F20B2CB40008753D0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EF5D2E20B2CB40008753D0 /* ViewController.swift */; };
 		84EF5D3220B2CB40008753D0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84EF5D3020B2CB40008753D0 /* Main.storyboard */; };
@@ -60,6 +61,7 @@
 		84AFC05520CD3D310074A53F /* QR.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QR.swift; sourceTree = "<group>"; };
 		84EC7D3020D148AA00DE3D4C /* DocumentDirectory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentDirectory.swift; sourceTree = "<group>"; };
 		84EC7D3220D9B59300DE3D4C /* saveType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = saveType.swift; sourceTree = "<group>"; };
+		84EC7D3420DA4A7800DE3D4C /* DeleteCampaignAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteCampaignAction.swift; sourceTree = "<group>"; };
 		84EF5D2920B2CB3F008753D0 /* DragonTide.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DragonTide.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84EF5D2C20B2CB3F008753D0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		84EF5D2E20B2CB40008753D0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -201,6 +203,7 @@
 				84AFC04020C41DE80074A53F /* RegisterAction.swift */,
 				84AFC04920C8582E0074A53F /* RetrieveCampaignListAction.swift */,
 				84AFC05320CC6E6E0074A53F /* AddCampaignAction.swift */,
+				84EC7D3420DA4A7800DE3D4C /* DeleteCampaignAction.swift */,
 			);
 			path = DragonTide.API;
 			sourceTree = "<group>";
@@ -354,6 +357,7 @@
 				84EF5D2F20B2CB40008753D0 /* ViewController.swift in Sources */,
 				84EF5D2D20B2CB3F008753D0 /* AppDelegate.swift in Sources */,
 				84AFC05220CC5EFF0074A53F /* CampaignAddController.swift in Sources */,
+				84EC7D3520DA4A7800DE3D4C /* DeleteCampaignAction.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

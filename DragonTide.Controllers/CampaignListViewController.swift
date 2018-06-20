@@ -5,7 +5,7 @@ class CampaignListViewController: UITableViewController {
     var Campaigns: [Campaign] = [];
     
     @IBAction func LogoutAction(_ sender: Any) {
-        DestroyValue(key: "AccessToken", saveType: .Temporary);
+        DestroyValue(key: "AccessToken", saveType: .Persistent);
         dismiss(animated: true, completion: nil);
     }
     
@@ -30,6 +30,24 @@ class CampaignListViewController: UITableViewController {
         self.performSegue(withIdentifier: "CampaignDetail", sender: Any?.self);
     }
     
+    override func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
+        let delete = UITableViewRowAction(style: .destructive, title: "Delete") { (action, indexPath) in
+            NSLog("Delete tapped on: " + self.Campaigns[indexPath.row].title);
+            // Request deletion
+            deleteCampaignAction(campaign: self.Campaigns[indexPath.row], completion: {
+                (ok: Bool, deleted: Bool?, error: Error?) in
+                if(ok) {
+                    // delete item at indexPath
+                    self.Campaigns.remove(at: indexPath.row);
+                    tableView.deleteRows(at: [indexPath], with: .fade);
+                    // Refresh tableView
+                    tableView.reloadData();
+                }
+            });
+        };
+        return [delete];
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad();
         let temp = UIViewController.displaySpinner(onView: self.view);
