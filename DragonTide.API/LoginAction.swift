@@ -16,7 +16,7 @@ func loginAction(email: String, password: String, completion: ((_ ok: Bool, _ me
                 do {
                     let jsDataResult = try JSONSerialization.jsonObject(with: jsonData) as! [String: Any];
                     let token = jsDataResult["message"] as! String;
-                    completion?(jsDataResult["ok"] as! Bool, Token(userId: nil, token: token, expires: nil), nil);
+                    completion?(jsDataResult["ok"] as! Bool, Token(userId: nil, token: token, expires: Date.init()), nil);
                 } catch let error as NSError {
                     completion?(false, nil, error);
                 }
